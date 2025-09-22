@@ -46,4 +46,3 @@ GRANT ALTER ON TABLE all_2509."select" TO team_select;
 
 -- Add each user to the team role
 GRANT team_select TO da14_thhi
-GRANT team_select TO da14_thhi;
