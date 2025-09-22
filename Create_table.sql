@@ -1,48 +1,51 @@
 CREATE TABLE all_2509."select" (
-"ID" INT,
-"Purchase-date" TIMESTAMPTZ,
-"Date" DATE,
-"Time" TIME,
-"Quarter" VARCHAR(10),
-"Qtr" INT,
-"Year" INT,
-"Month" INT,
-"Date2" INT,
-"Special DAY" BOOL, -- 1 OR 0, TO CONFIRM
-"Online Sale Offers" BOOL, -- 1 OR 0, TO CONFIRM
-"Day" INT,
-"Weekend" BOOL, -- 1 OR 0, TO CONFIRM
-"Morning" BOOL, -- 1 OR 0, TO CONFIRM
-"Afternoon" BOOL, -- 1 OR 0, TO CONFIRM
-"Evening" BOOL, -- 1 OR 0, TO CONFIRM
-"Night" BOOL, -- 1 OR 0, TO CONFIRM
-"Gender" BOOL, -- 1 OR 0, TO CONFIRM
-"Customer ID" VARCHAR (10),
-"Gender (F=1665, M=1815)" VARCHAR(10), -- CHAR? TO CONFIRM
-"Product-Name" VARCHAR(180),
-"Item-Status" VARCHAR(10),
-"Quantity" INT,
-"Currency" VARCHAR(10),
-"Item Price" FLOAT,
-"Shipping-Price" FLOAT,
-"Ship-City" VARCHAR(20),
-"Ship-State" VARCHAR(20),
-"Ship-Postal-Code" VARCHAR(10),
-"Category" VARCHAR(20),
-"Total_amount" FLOAT,
-"Author" VARCHAR(30),
-"Publication" VARCHAR(30),
-"Profit Percentage" (%) INT,
-"Profit (INR)" FLOAT,
-"Cost Price" FLOAT
+	id SERIAL PRIMARY KEY,
+	purchase_date VARCHAR(30),
+	date DATE,
+	time TIME,
+	quarter VARCHAR(100),
+	qtr INT,
+	year INT,
+	month INT,
+	day INT,
+	special_day INT, -- 1 OR 0, TO CONFIRM
+	online_sale_offers INT, -- 1 OR 0, TO CONFIRM
+	day_of_week INT,
+	weekend INT, -- 1 OR 0, TO CONFIRM
+	morning INT, -- 1 OR 0, TO CONFIRM
+	afternoon INT, -- 1 OR 0, TO CONFIRM
+	evening INT, -- 1 OR 0, TO CONFIRM
+	night INT, -- 1 OR 0, TO CONFIRM
+	gender_int INT, -- 1 OR 0, TO CONFIRM
+	customer_id VARCHAR (100),
+	gender VARCHAR(100), -- CHAR? TO CONFIRM
+	product_name VARCHAR(180),
+	item_status VARCHAR(100),
+	quantity INT,
+	currency VARCHAR(100),
+	item_price FLOAT,
+	shipping_price FLOAT,
+	ship_city VARCHAR(100),
+	ship_state VARCHAR(100),
+	ship_postal_code VARCHAR(100),
+	category VARCHAR(20),
+	total_amount FLOAT,
+	author VARCHAR(100),
+	publication VARCHAR(100),
+	profit_percentage INT,
+	profit_inr FLOAT,
+	cost_price FLOAT
 );
 
 
+GRANT DELETE, INSERT,  REFERENCES, SELECT, UPDATE, TRUNCATE, TRIGGER ON TABLE all_2509."select" TO da14_thhi;
+GRANT DELETE, INSERT,  REFERENCES, SELECT, UPDATE, TRUNCATE, TRIGGER ON TABLE all_2509."select" TO da14_ewhe;
+GRANT DELETE, INSERT,  REFERENCES, SELECT, UPDATE, TRUNCATE, TRIGGER ON TABLE all_2509."select" TO da14_bege;
+GRANT DELETE, INSERT,  REFERENCES, SELECT, UPDATE, TRUNCATE, TRIGGER ON TABLE all_2509."select" TO de14_cise;
+GRANT DELETE, INSERT,  REFERENCES, SELECT, UPDATE, TRUNCATE, TRIGGER ON TABLE all_2509."select" TO de14_aite;
 
-CREATE ROLE team_select;
 
--- Grant ALTER privilege on the table (or schema) to the role
-GRANT ALTER ON TABLE all_2509."select" TO team_select;
+SELECT *
+FROM all_2509."select";
 
--- Add each user to the team role
-GRANT team_select TO da14_thhi
+
