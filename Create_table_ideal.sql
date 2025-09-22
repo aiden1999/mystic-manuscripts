@@ -53,4 +53,3 @@ SELECT COUNT(*)
 FROM information_schema.columns
 WHERE table_schema = 'all_2509'
   AND table_name   = 'select_copy';
-
