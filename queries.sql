@@ -111,6 +111,7 @@ SELECT
     product_name,
     item_status,
     quantity,
+    currency,
     item_price,
     shipping_price,
     ship_city,
