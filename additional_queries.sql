@@ -1,8 +1,13 @@
+-- query8
+
 SELECT
     COUNT(id)
 FROM all_2509.select_test
 WHERE
     (day_of_week = 6 OR day_of_week = 7) AND weekend != 1;
+
+
+-- query9
 
 SELECT COUNT(id)
 FROM
