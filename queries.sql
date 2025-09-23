@@ -89,7 +89,41 @@ WHERE
 -- query7
 
 SELECT
-    *
+    id,
+    purchase_date,
+    time_stamp,
+    quarter,
+    qtr,
+    year_num,
+    month_num,
+    day_num,
+    special_day,
+    online_sale_offers,
+    day_of_week,
+    weekend,
+    morning,
+    afternoon,
+    evening,
+    night,
+    gender_int,
+    customer_id,
+    gender,
+    product_name,
+    item_status,
+    quantity,
+    item_price,
+    shipping_price,
+    ship_city,
+    ship_state,
+    ship_postal_code,
+    category,
+    total_amount,
+    author,
+    publication,
+    profit_percentage,
+    profit_inr,
+    cost_price,
+    TO_CHAR(date_mmddyyyy, 'MM/DD/YYYY') AS mdy_date
 FROM
     all_2509.select_test
 WHERE
