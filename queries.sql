@@ -36,3 +36,10 @@ WHERE
 	id IN (614, 1223, 1749, 2174, 3098);
 
 -- query7
+
+SELECT
+	*
+FROM
+	all_2509."select_test"
+WHERE
+	id IN (862, 1397, 1414, 2429, 2605);
