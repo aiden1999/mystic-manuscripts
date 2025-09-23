@@ -1,6 +1,6 @@
 -- query1
 
-SELECT 
+SELECT
 	COUNT(id)
 FROM
 	all_2509."select";
@@ -27,11 +27,11 @@ WHERE table_schema = 'all_2509'
 
 -- query6
 
-SELECT
+SELECT 
 	id,
-	date
-FROM
-	all_2509."select"
+	to_char(date_mmddyyyy, 'MM/DD/YYYY') AS mdy_date
+FROM 
+	all_2509."select_test"
 WHERE
 	id IN (614, 1223, 1749, 2174, 3098);
 
