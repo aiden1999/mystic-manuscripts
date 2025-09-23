@@ -46,7 +46,7 @@ SELECT
     )
 FROM all_2509.select_test;
 
---query5
+-- query5
 
 SELECT
     ROUND(
