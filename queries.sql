@@ -78,9 +78,7 @@ FROM all_2509.select_test;
 
 -- query6
 
-SELECT
-    id,
-    TO_CHAR(date_mmddyyyy, 'MM/DD/YYYY') AS mdy_date
+SELECT TO_CHAR(date_mmddyyyy, 'MM/DD/YYYY') AS mdy_date
 FROM
     all_2509.select_test
 WHERE
